@@ -1,0 +1,45 @@
+
+########################Introduction###########################
+This is the control software for the gigasphere scanner setup.
+
+The scanner setup is intended to test ultra-high rate germanium
+strip detectors with a collomated source.
+
+The setup conists of a large tungsten collimator suspended by
+ropes and counterweights controlled by two 150mm range zaber
+motors.
+
+These motors control the x,y position of the collimator
+hole through which radioactive decays can reach the surface
+of the ultra high rate detector being tested through the an
+enclosing cryostat that keeps the detector and its electronics
+cool.
+
+########################Installation###########################
+This code depends upon the Zaber motion library avilable here:
+https://software.zaber.com/motion-library/docs/tutorials/install/py
+
+It also depends upon matplotlib and other generic python modules.
+These can be typically be installed with pip install [missing dependency]
+
+###########################Operation###########################
+The scan confiruation is controlled by parameters defined in the
+main function.
+
+The length_x and length_y parameters control the [millimeter]
+region to be scanned.
+
+The step size parameter controls the [millimeter] steps in which
+the scan takes place.
+
+The period parameter controls how long the scanner will sit and
+aquire data at a particular location.
+
+As indicated in the terminal you can pause/resume/quit the scan
+with the p,r and q keys in the terminal
+
+############################Output#############################
+As the scan progresses creates files named after the position,
+time, date of the scan. The format is
+
+x_y_time_day_month_year
