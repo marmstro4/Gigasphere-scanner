@@ -37,8 +37,11 @@ def setup_devices():
     device_y.identify()
     axis_x = device_x.get_axis(1)
     axis_y = device_y.get_axis(1)
+    axis_x.settings['maxspeed'] = 1000 #Micrometers per second
+    axis_y.settings['maxspeed'] = 1000 #Micrometers per second
     axis_x.home(wait_until_idle=True)
     axis_y.home(wait_until_idle=True)
+
     return axis_x, axis_y
 
 # ---- Input Control ----
